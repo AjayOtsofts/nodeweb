@@ -29,7 +29,9 @@ else {
 });
 
 app.get('/', (req, res) =>{
-   res.send('<h1>Hello Express</h1>');
+   res.render('welcome.hbs',{
+     pagetitle: "Welcome to nodejs project"
+   });
 });
 app.get('/about', (req, res) =>{
 res.render('about.hbs', {
